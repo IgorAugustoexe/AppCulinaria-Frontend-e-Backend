@@ -1,1 +1,1 @@
-Existem Dois READMES em cada pasta explicando todo o passo a passo!
+Existem um README em cada pasta explicando todo o passo a passo!
