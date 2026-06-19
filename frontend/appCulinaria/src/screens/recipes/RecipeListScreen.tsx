@@ -39,7 +39,6 @@ export default function RecipeListScreen() {
   const lastScrollYRef = useRef<number>(0);
 
   const [recipeList, setRecipeList] = useState<Recipe[]>([]);
-  const [totalRecipes, setTotalRecipes] = useState<number>(0);
 
   const [loadingRecipes, setLoadingRecipes] = useState<boolean>(false);
   const [refreshingRecipes, setRefreshingRecipes] = useState<boolean>(false);
@@ -71,7 +70,6 @@ export default function RecipeListScreen() {
         setRecipeList((currentRecipes) => (shouldAppend ? [...currentRecipes, ...response.data] : response.data));
         paginationRef.current = response.currentPage;
         hasMoreRef.current = response.hasMore;
-        setTotalRecipes(response.total);
       } catch (error) {
         setErrorListRecipe(true);
         navigation.navigate("ModalInfo", {
