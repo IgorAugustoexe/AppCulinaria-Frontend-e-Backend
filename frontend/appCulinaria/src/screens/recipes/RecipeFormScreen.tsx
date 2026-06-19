@@ -153,7 +153,9 @@ export default function RecipeFormScreen() {
                 <View style={[styles.categoryColor, { backgroundColor: selectedCategoryItem.color }]} />
               )}
               <Text style={[styles.categorySelectorText, !selectedCategory && styles.categorySelectorPlaceholder]}>
-                {selectedCategory || `Selecione uma das ${recipeCategories.length} categorias`}
+                {selectedCategoryItem?.name ||
+                  selectedCategory ||
+                  `Selecione uma das ${recipeCategories.length} categorias`}
               </Text>
               <AppIcon name={showCategories ? "angleUp" : "angleRight"} color={colors.textSecondary} />
             </TouchableOpacity>

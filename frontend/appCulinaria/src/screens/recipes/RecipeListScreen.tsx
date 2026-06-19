@@ -184,7 +184,7 @@ export default function RecipeListScreen() {
 
   const FooterBar = () => (
     <View style={styles.footerBar}>
-      <SearchBar />
+      {SearchBar()}
       <RecipeAddButton />
     </View>
   );
